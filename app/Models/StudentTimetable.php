@@ -22,28 +22,28 @@ class StudentTimetable extends Model
 
     
     
-    // public function hall()
-    // {
-    //     return $this->belongsTo(Hall::class, 'hall_id');
-    // }
-    // public function subject()
-    // {
-    //     return $this->belongsTo(Subject::class);
-    // }
-    // public function day()
-    // {
-    //     return $this->belongsTo(Day::class);
-    // }
-    // public function class()
-    // {
-    //     return $this->belongsTo(LecturerGroup::class, 'lecturer_group_id');
-    // }
+    public function hall()
+    {
+        return $this->belongsTo(Hall::class, 'hall_id');
+    }
+    public function subject()
+    {
+        return $this->belongsTo(Subject::class);
+    }
+    public function day()
+    {
+        return $this->belongsTo(Day::class);
+    }
+    public function class()
+    {
+        return $this->belongsTo(LecturerGroup::class, 'lecturer_group_id');
+    }
 
 
-    // public function user()
-    // {
-    //     return $this->belongsTo(User::class, 'user_id');
-    // }
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 
 
 }
