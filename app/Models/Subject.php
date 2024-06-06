@@ -13,6 +13,7 @@ class Subject extends Model
     protected $fillable = [
         'subject_code',
         'subject_name',
-        'lecturer_name',        
+        'lecturer_name',      
+        'user_id', 
     ];
 }

@@ -34,24 +34,21 @@
                 <table class="table table-bordered">
                     <tr>
                         <th>No</th>
-                        <th>User</th>
-                        <th>Subject</th>
+                        <th>Subject Code</th>
                         <th>Day</th>
                         <th>Hall</th>
                         <th>Lecturer Group</th>
                         <th>Start</th>
                         <th>End</th>
-                        <th>Action</th>
                         <th width="280px">Action</th>
                     </tr>
-                    @foreach ($timetables as $s)
+                    @foreach ($timetables as $s )
                         <tr>
                             <td>{{ $s->id }}</td>
-                            <td>{{ $s->user_id }}</td>
-                            <td>{{ $s->subject_id }}</td>
-                            <td>{{ $s->day_id }}</td>
-                            <td>{{ $s->hall_id }}</td>
-                            <td>{{ $s->lecturer_group_id }}</td>
+                            <td>{{ $s->subject->subject_code ??''}}- {{ $s->subject->subject_name ??''}}</td>
+                            <td>{{ $s->day->day_name  ??''}}</td>
+                            <td>{{ $s->hall->lecture_hall_name ??''}}</td>
+                            <td>{{ $s->class->name ?? ''}}</td>
                             <td>{{ $s->time_from }}</td>
                             <td>{{ $s->time_to }}</td>
                             <td>

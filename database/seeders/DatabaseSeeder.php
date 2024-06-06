@@ -17,14 +17,14 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create([
             'name' => 'Test User',
-            'email' => 'test@example.com',
+            'email' => 'admin@gmail.com',
         ]);
 
         $this->call([DaySeeder::class, GroupSeeder::class, HallsSeeder::class, SubjectsSeeder::class]);
 
         
-        $this->call(GroupSeeder::class);
-        $this->call(HallsSeeder::class);
-        $this->call(SubjectsSeeder::class);
+        // $this->call(GroupSeeder::class);
+        // $this->call(HallsSeeder::class);
+        // $this->call(SubjectsSeeder::class);
     }
 }

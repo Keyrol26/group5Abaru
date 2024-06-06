@@ -28,8 +28,8 @@ Route::controller(App\Http\Controllers\StudentController::class)->group(function
     Route::get('/students', 'index')->name('students.index');
     Route::get('/students/create', 'create')->name('students.create');
     Route::post('/students', 'store')->name('students.store');
-    Route::post('/students/{student}', 'show')->name('students.show');
-    Route::get('/students/{student}/edit')->name('students.edit');
+    Route::get('/students/{student}', 'show')->name('students.show');
+    Route::get('/students/{student}/edit','edit')->name('students.edit');
     Route::put('/students/{student}', 'update')->name('students.update');
     Route::delete('/students/{student}', 'destroy')->name('students.destroy');
 });
@@ -58,8 +58,8 @@ Route::controller(App\Http\Controllers\StudentTimetableController::class)->group
     Route::get('/timetables', 'index')->name('timetables.index');
     Route::get('/timetables/create', 'create')->name('timetables.create');
     Route::post('/timetables', 'store')->name('timetables.store');
-    Route::post('/timetables{timetables}',  'show')->name('timetables.show');
-    Route::get('/timetables/{timetables}/edit', 'edit')->name('timetables.edit');
+    Route::get('/timetables/{timetables}', 'show')->name('timetables.show');
+    Route::get('/timetables/{timetable}/edit', 'edit')->name('timetables.edit');
     Route::put('/timetables/{timetables}', 'update')->name('timetables.update');
     Route::delete('/timetables/{timetables}',  'destroy')->name('timetables.destroy');
 });
