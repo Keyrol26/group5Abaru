@@ -51,7 +51,7 @@ class StudentTimetableController extends Controller
             'day_id' => $request->day_id,
             'subject_id' => $request->subject_id,
             'hall_id' => $request->lecture_hall_id,
-            'lecturer_group_id' => $request->class_id,
+            'lecturer_group_id' => $request->class,
             'time_from' => $request->time_from,
             'time_to' => $request->time_to,
         ]);
